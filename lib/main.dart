@@ -6,7 +6,9 @@ import 'package:flutter/services.dart';
 // import 'package:flutter_application_1/101/scaffold_learn.dart';
 // import 'package:flutter_application_1/101/button_learn.dart';
 // import 'package:flutter_application_1/101/appbar_learn.dart';
-import 'package:flutter_application_1/101/icon_learn.dart';
+// import 'package:flutter_application_1/101/icon_learn.dart';
+
+import 'package:flutter_application_1/101/color_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,14 +25,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light().copyWith(
           // iconTheme: const IconThemeData(),
 
+          hintColor: ColorsItems.torchRed,
+
           // This appBarTheme covers the whole application's AppBar
           appBarTheme: const AppBarTheme(
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        systemOverlayStyle: SystemUiOverlayStyle.dark,
-        elevation: 4,
-      )),
-      home: IconLearnView(),
+            centerTitle: true,
+            backgroundColor: Colors.transparent,
+            systemOverlayStyle: SystemUiOverlayStyle.dark,
+            elevation: 4,
+          )),
+      home: const ColorLearn(),
     );
   }
 }
