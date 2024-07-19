@@ -5,7 +5,8 @@ import 'package:flutter/services.dart';
 // import 'package:flutter_application_1/101/container_sized_box_learn.dart';
 // import 'package:flutter_application_1/101/scaffold_learn.dart';
 // import 'package:flutter_application_1/101/button_learn.dart';
-import 'package:flutter_application_1/101/appbar_learn.dart';
+// import 'package:flutter_application_1/101/appbar_learn.dart';
+import 'package:flutter_application_1/101/icon_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.light().copyWith(
+          // iconTheme: const IconThemeData(),
+
           // This appBarTheme covers the whole application's AppBar
           appBarTheme: const AppBarTheme(
         centerTitle: true,
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
         systemOverlayStyle: SystemUiOverlayStyle.dark,
         elevation: 4,
       )),
-      home: const AppBarLearn(),
+      home: IconLearnView(),
     );
   }
 }
