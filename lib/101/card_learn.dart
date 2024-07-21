@@ -45,7 +45,7 @@ class CardLearn extends StatelessWidget {
 }
 
 class _CustomCard extends StatelessWidget {
-  const _CustomCard({Key? key, required this.child, required this.color});
+  const _CustomCard({required this.child, required this.color});
 
   final Color color;
   // final stadiumBorder = const StadiumBorder();
