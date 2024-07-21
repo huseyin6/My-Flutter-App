@@ -10,7 +10,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_application_1/101/color_learn.dart';
 
 // import 'package:flutter_application_1/101/stateless_learn.dart';
-import 'package:flutter_application_1/101/padding_learn.dart';
+// import 'package:flutter_application_1/101/padding_learn.dart';
+import 'package:flutter_application_1/101/card_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
           // iconTheme: const IconThemeData(),
 
           hintColor: ColorsItems.torchRed,
+          cardTheme: CardTheme(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10))),
 
           // This appBarTheme covers the whole application's AppBar
           appBarTheme: const AppBarTheme(
@@ -36,7 +40,7 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.dark,
             elevation: 4,
           )),
-      home: const PaddingLearn(),
+      home: const CardLearn(),
     );
   }
 }
