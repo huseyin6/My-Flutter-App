@@ -12,7 +12,10 @@ import 'package:flutter_application_1/101/color_learn.dart';
 // import 'package:flutter_application_1/101/stateless_learn.dart';
 // import 'package:flutter_application_1/101/padding_learn.dart';
 // import 'package:flutter_application_1/101/card_learn.dart';
-import 'package:flutter_application_1/101/image_learn.dart';
+// import 'package:flutter_application_1/101/image_learn.dart';
+
+// First Demo Screen:
+import 'package:flutter_application_1/demos/note_demos_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,7 +44,7 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.dark,
             elevation: 4,
           )),
-      home: const ImageLearn(),
+      home: const NoteDemos(),
     );
   }
 }
