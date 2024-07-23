@@ -19,7 +19,8 @@ import 'package:flutter_application_1/101/color_learn.dart';
 
 // import 'package:flutter_application_1/101/custom_widget_learn.dart';
 // import 'package:flutter_application_1/101/indicator_learn.dart';
-import 'package:flutter_application_1/101/list_tile_learn.dart';
+// import 'package:flutter_application_1/101/list_tile_learn.dart';
+import 'package:flutter_application_1/101/column_row_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.dark,
             elevation: 4,
           )),
-      home: const ListTileLearn(),
+      home: const ColumnRowLearn(),
     );
   }
 }
