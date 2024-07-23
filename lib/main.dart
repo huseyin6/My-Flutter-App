@@ -17,7 +17,8 @@ import 'package:flutter_application_1/101/color_learn.dart';
 // First Demo Screen:
 // import 'package:flutter_application_1/demos/note_demos_view.dart';
 
-import 'package:flutter_application_1/101/custom_widget_learn.dart';
+// import 'package:flutter_application_1/101/custom_widget_learn.dart';
+import 'package:flutter_application_1/101/indicator_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData.light().copyWith(
           // iconTheme: const IconThemeData(),
-
+          progressIndicatorTheme:
+              const ProgressIndicatorThemeData(color: Colors.indigo),
           hintColor: ColorsItems.torchRed,
           cardTheme: CardTheme(
               shape: RoundedRectangleBorder(
@@ -46,7 +48,7 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.dark,
             elevation: 4,
           )),
-      home: const CustomWidgetLearn(),
+      home: const IndicatorLearn(),
     );
   }
 }
