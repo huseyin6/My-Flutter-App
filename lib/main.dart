@@ -18,7 +18,8 @@ import 'package:flutter_application_1/101/color_learn.dart';
 // import 'package:flutter_application_1/demos/note_demos_view.dart';
 
 // import 'package:flutter_application_1/101/custom_widget_learn.dart';
-import 'package:flutter_application_1/101/indicator_learn.dart';
+// import 'package:flutter_application_1/101/indicator_learn.dart';
+import 'package:flutter_application_1/101/list_tile_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,6 +37,8 @@ class MyApp extends StatelessWidget {
           // iconTheme: const IconThemeData(),
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Colors.indigo),
+          listTileTheme:
+              const ListTileThemeData(contentPadding: EdgeInsets.zero),
           hintColor: ColorsItems.torchRed,
           cardTheme: CardTheme(
               shape: RoundedRectangleBorder(
@@ -48,7 +51,7 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.dark,
             elevation: 4,
           )),
-      home: const IndicatorLearn(),
+      home: const ListTileLearn(),
     );
   }
 }
