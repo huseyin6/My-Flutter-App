@@ -14,14 +14,18 @@ import 'package:flutter_application_1/101/color_learn.dart';
 // import 'package:flutter_application_1/101/card_learn.dart';
 // import 'package:flutter_application_1/101/image_learn.dart';
 
-// First Demo Screen:
+// 1. First Demo Screen:
 // import 'package:flutter_application_1/demos/note_demos_view.dart';
 
 // import 'package:flutter_application_1/101/custom_widget_learn.dart';
 // import 'package:flutter_application_1/101/indicator_learn.dart';
 // import 'package:flutter_application_1/101/list_tile_learn.dart';
 // import 'package:flutter_application_1/101/column_row_learn.dart';
-import 'package:flutter_application_1/101/stack_learn.dart';
+// import 'package:flutter_application_1/101/stack_learn.dart';
+
+// 2. Second Demo Screen:
+// import 'package:flutter_application_1/demos/note_demos_view.dart';
+import 'package:flutter_application_1/demos/stack_demo_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,7 +57,7 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.dark,
             elevation: 4,
           )),
-      home: const StackLearn(),
+      home: const StackDemoView(),
     );
   }
 }
