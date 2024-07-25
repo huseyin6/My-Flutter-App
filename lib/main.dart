@@ -24,8 +24,9 @@ import 'package:flutter_application_1/101/color_learn.dart';
 // import 'package:flutter_application_1/101/stack_learn.dart';
 
 // 2. Second Demo Screen:
-// import 'package:flutter_application_1/demos/note_demos_view.dart';
-import 'package:flutter_application_1/demos/stack_demo_view.dart';
+// import 'package:flutter_application_1/demos/stack_demo_view.dart';
+
+import 'package:flutter_application_1/101/statefull_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,14 +42,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData.light().copyWith(
           // iconTheme: const IconThemeData(),
-          progressIndicatorTheme:
-              const ProgressIndicatorThemeData(color: Colors.indigo),
-          listTileTheme:
-              const ListTileThemeData(contentPadding: EdgeInsets.zero),
+          progressIndicatorTheme: const ProgressIndicatorThemeData(color: Colors.indigo),
+          listTileTheme: const ListTileThemeData(contentPadding: EdgeInsets.zero),
           hintColor: ColorsItems.torchRed,
-          cardTheme: CardTheme(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10))),
+          cardTheme: CardTheme(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
 
           // This appBarTheme covers the whole application's AppBar
           appBarTheme: const AppBarTheme(
@@ -57,7 +54,7 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.dark,
             elevation: 4,
           )),
-      home: const StackDemoView(),
+      home: const StatefullLearn(),
     );
   }
 }
