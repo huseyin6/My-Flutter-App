@@ -26,7 +26,8 @@ import 'package:flutter_application_1/101/color_learn.dart';
 // 2. Second Demo Screen:
 // import 'package:flutter_application_1/demos/stack_demo_view.dart';
 
-import 'package:flutter_application_1/101/statefull_learn.dart';
+// import 'package:flutter_application_1/101/statefull_learn.dart';
+import 'package:flutter_application_1/101/page_view_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.dark,
             elevation: 4,
           )),
-      home: const StatefullLearn(),
+      home: const PageViewLearn(),
     );
   }
 }
