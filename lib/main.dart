@@ -28,7 +28,8 @@ import 'package:flutter_application_1/101/color_learn.dart';
 
 // import 'package:flutter_application_1/101/statefull_learn.dart';
 // import 'package:flutter_application_1/101/page_view_learn.dart';
-import 'package:flutter_application_1/101/statefull_life_cycle_learn.dart';
+// import 'package:flutter_application_1/101/statefull_life_cycle_learn.dart';
+import 'package:flutter_application_1/101/text_field_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,24 +42,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData.light().copyWith(
-          // iconTheme: const IconThemeData(),
-          progressIndicatorTheme: const ProgressIndicatorThemeData(color: Colors.indigo),
-          listTileTheme: const ListTileThemeData(contentPadding: EdgeInsets.zero),
-          hintColor: ColorsItems.torchRed,
-          cardTheme: CardTheme(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+        title: 'Flutter Demo',
+        theme: ThemeData.light().copyWith(
+            // iconTheme: const IconThemeData(),
+            progressIndicatorTheme: const ProgressIndicatorThemeData(color: Colors.indigo),
+            listTileTheme: const ListTileThemeData(contentPadding: EdgeInsets.zero),
+            hintColor: ColorsItems.torchRed,
+            cardTheme: CardTheme(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
 
-          // This appBarTheme covers the whole application's AppBar
-          appBarTheme: const AppBarTheme(
-            centerTitle: true,
-            backgroundColor: Colors.transparent,
-            systemOverlayStyle: SystemUiOverlayStyle.dark,
-            elevation: 4,
-          )),
-      home: const StatefullLifeCycleLearn(
-        message: "Flutter",
-      ),
-    );
+            // This appBarTheme covers the whole application's AppBar
+            appBarTheme: const AppBarTheme(
+              centerTitle: true,
+              backgroundColor: Colors.transparent,
+              systemOverlayStyle: SystemUiOverlayStyle.dark,
+              elevation: 4,
+            )),
+        home: const TextFieldLearn());
   }
 }
