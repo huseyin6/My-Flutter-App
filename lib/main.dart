@@ -49,6 +49,14 @@ class MyApp extends StatelessWidget {
             listTileTheme: const ListTileThemeData(contentPadding: EdgeInsets.zero),
             hintColor: ColorsItems.torchRed,
             cardTheme: CardTheme(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+            inputDecorationTheme: const InputDecorationTheme(
+                filled: true,
+                // iconColor: Colors.red, // (!!!!)
+                border: OutlineInputBorder(),
+                labelStyle: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w400)),
+            // textTheme: const TextTheme(titleMedium: TextStyle(color: Colors.red)), // (!!!!)
+            textSelectionTheme: const TextSelectionThemeData(
+                selectionColor: Colors.red, cursorColor: Colors.green, selectionHandleColor: Colors.black),
 
             // This appBarTheme covers the whole application's AppBar
             appBarTheme: const AppBarTheme(
