@@ -29,7 +29,10 @@ import 'package:flutter_application_1/101/color_learn.dart';
 // import 'package:flutter_application_1/101/statefull_learn.dart';
 // import 'package:flutter_application_1/101/page_view_learn.dart';
 // import 'package:flutter_application_1/101/statefull_life_cycle_learn.dart';
-import 'package:flutter_application_1/101/text_field_learn.dart';
+// import 'package:flutter_application_1/101/text_field_learn.dart';
+
+// 3. Second Demo Screen:
+import 'package:flutter_application_1/demos/color_demos_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,6 +68,6 @@ class MyApp extends StatelessWidget {
               systemOverlayStyle: SystemUiOverlayStyle.dark,
               elevation: 4,
             )),
-        home: const TextFieldLearn());
+        home: const ColorDemos());
   }
 }
