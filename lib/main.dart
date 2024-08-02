@@ -41,7 +41,9 @@ import 'package:flutter_application_1/101/color_learn.dart';
 // import 'package:flutter_application_1/101/list_view_builder_learn.dart';
 
 // 5. Second Demo Screen:
-import 'package:flutter_application_1/demos/my_collections_demos.dart';
+// import 'package:flutter_application_1/demos/my_collections_demos.dart';
+
+import 'package:flutter_application_1/101/navigation_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -77,6 +79,6 @@ class MyApp extends StatelessWidget {
               systemOverlayStyle: SystemUiOverlayStyle.dark,
               elevation: 4,
             )),
-        home: const MyCollectionsDemos());
+        home: const NavigationLearn());
   }
 }
