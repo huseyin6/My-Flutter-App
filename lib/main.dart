@@ -64,6 +64,14 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData.light().copyWith(
             // iconTheme: const IconThemeData(),
+            tabBarTheme: const TabBarTheme(
+              labelColor: Colors.blueGrey,
+              unselectedLabelColor: Colors.indigoAccent,
+              indicatorColor: Colors.black,
+            ),
+            bottomAppBarTheme: const BottomAppBarTheme(
+              shape: CircularNotchedRectangle(),
+            ),
             progressIndicatorTheme: const ProgressIndicatorThemeData(color: Colors.indigo),
             listTileTheme: const ListTileThemeData(contentPadding: EdgeInsets.zero),
             hintColor: ColorsItems.torchRed,
