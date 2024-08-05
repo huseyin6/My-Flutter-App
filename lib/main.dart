@@ -49,7 +49,8 @@ import 'package:flutter_application_1/101/color_learn.dart';
 // ################## 202 ##################
 // #########################################
 // import 'package:flutter_application_1/202/tab_learn.dart';
-import 'package:flutter_application_1/202/model_learn_view.dart';
+// import 'package:flutter_application_1/202/model_learn_view.dart';
+import 'package:flutter_application_1/202/service/service_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -93,6 +94,6 @@ class MyApp extends StatelessWidget {
               systemOverlayStyle: SystemUiOverlayStyle.dark,
               elevation: 4,
             )),
-        home: const ModelLearnView());
+        home: const ServiceLearnView());
   }
 }
