@@ -1,8 +1,6 @@
-import 'dart:io';
-
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/202/service/post_model.dart';
+import 'package:flutter_application_1/202/service/post_service.dart';
 
 class ServicePostLearnView extends StatefulWidget {
   const ServicePostLearnView({super.key});
@@ -14,8 +12,8 @@ class ServicePostLearnView extends StatefulWidget {
 class _ServicePostLearnViewState extends State<ServicePostLearnView> {
   String? message;
   bool _isLoading = false;
-  late final Dio _dio;
-  final _baseUrl = "https://jsonplaceholder.typicode.com/";
+
+  late final PostService _postService;
 
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _bodyController = TextEditingController();
@@ -29,19 +27,15 @@ class _ServicePostLearnViewState extends State<ServicePostLearnView> {
   @override
   void initState() {
     super.initState();
-    _dio = Dio(BaseOptions(baseUrl: _baseUrl));
+    _postService = PostService();
   }
 
   Future<void> _addItemToService(PostModelApi postModel) async {
     _changeLoading();
-    final response = await _dio.post("posts", data: postModel);
-    if (response.statusCode == HttpStatus.created) {
+    final response = await _postService.addItemToService(postModel);
+    if (response) {
       setState(() {
         message = "Done";
-      });
-    } else {
-      setState(() {
-        message = "Fail";
       });
     }
     _changeLoading();
