@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/202/service/comment_learn_view.dart';
 import 'package:flutter_application_1/202/service/post_model.dart';
 import 'package:flutter_application_1/202/service/post_service.dart';
 
@@ -13,7 +14,7 @@ class _ServiceLearnViewState extends State<ServiceLearnView> {
   List<PostModelApi>? _items;
   bool _isLoading = false;
 
-  late final PostService _postService;
+  late final IPostService _postService;
 
   @override
   void initState() {
@@ -65,6 +66,12 @@ class _PostCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 20),
       child: ListTile(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => CommentLearnView(
+                    postId: _model?.id,
+                  )));
+        },
         title: Text(_model?.title ?? " "),
         subtitle: Text(_model?.body ?? " "),
       ),

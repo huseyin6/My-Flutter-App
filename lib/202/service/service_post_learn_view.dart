@@ -13,7 +13,7 @@ class _ServicePostLearnViewState extends State<ServicePostLearnView> {
   String? message;
   bool _isLoading = false;
 
-  late final PostService _postService;
+  late final IPostService _postService;
 
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _bodyController = TextEditingController();
