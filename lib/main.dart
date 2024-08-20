@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 
 // import 'package:flutter_application_1/101/text_learn_view.dart';
 // import 'package:flutter_application_1/101/container_sized_box_learn.dart';
@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 // import 'package:flutter_application_1/101/button_learn.dart';
 // import 'package:flutter_application_1/101/appbar_learn.dart';
 // import 'package:flutter_application_1/101/icon_learn.dart';
-import 'package:flutter_application_1/101/color_learn.dart';
+// import 'package:flutter_application_1/101/color_learn.dart';
 
 // import 'package:flutter_application_1/101/stateless_learn.dart';
 // import 'package:flutter_application_1/101/padding_learn.dart';
@@ -52,7 +52,9 @@ import 'package:flutter_application_1/101/color_learn.dart';
 // import 'package:flutter_application_1/202/model_learn_view.dart';
 // import 'package:flutter_application_1/202/service/service_get_learn_view.dart';
 // import 'package:flutter_application_1/202/service/service_post_learn_view.dart';
-import 'package:flutter_application_1/202/package_learn_view.dart';
+// import 'package:flutter_application_1/202/package_learn_view.dart';
+import 'package:flutter_application_1/202/theme/light_theme.dart';
+import 'package:flutter_application_1/202/theme_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -66,36 +68,38 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData.light().copyWith(
-            // iconTheme: const IconThemeData(),
-            tabBarTheme: const TabBarTheme(
-              labelColor: Colors.blueGrey,
-              unselectedLabelColor: Colors.indigoAccent,
-              indicatorColor: Colors.black,
-            ),
-            bottomAppBarTheme: const BottomAppBarTheme(
-              shape: CircularNotchedRectangle(),
-            ),
-            progressIndicatorTheme: const ProgressIndicatorThemeData(color: Colors.indigo),
-            listTileTheme: const ListTileThemeData(contentPadding: EdgeInsets.zero),
-            hintColor: ColorsItems.torchRed,
-            cardTheme: CardTheme(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-            inputDecorationTheme: const InputDecorationTheme(
-                filled: true,
-                // iconColor: Colors.red, // (!!!!)
-                border: OutlineInputBorder(),
-                labelStyle: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w400)),
-            // textTheme: const TextTheme(titleMedium: TextStyle(color: Colors.red)), // (!!!!)
-            textSelectionTheme: const TextSelectionThemeData(
-                selectionColor: Colors.red, cursorColor: Colors.green, selectionHandleColor: Colors.black),
+        theme: LightTheme().theme,
 
-            // This appBarTheme covers the whole application's AppBar
-            appBarTheme: const AppBarTheme(
-              centerTitle: true,
-              backgroundColor: Colors.transparent,
-              systemOverlayStyle: SystemUiOverlayStyle.dark,
-              elevation: 4,
-            )),
-        home: const PackageLearnView());
+        // ThemeData.light().copyWith(
+        //   // iconTheme: const IconThemeData(),
+        //   tabBarTheme: const TabBarTheme(
+        //     labelColor: Colors.blueGrey,
+        //     unselectedLabelColor: Colors.indigoAccent,
+        //     indicatorColor: Colors.black,
+        //   ),
+        //   bottomAppBarTheme: const BottomAppBarTheme(
+        //     shape: CircularNotchedRectangle(),
+        //   ),
+        //   progressIndicatorTheme: const ProgressIndicatorThemeData(color: Colors.indigo),
+        //   listTileTheme: const ListTileThemeData(contentPadding: EdgeInsets.zero),
+        //   hintColor: ColorsItems.torchRed,
+        //   cardTheme: CardTheme(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+        //   inputDecorationTheme: const InputDecorationTheme(
+        //       filled: true,
+        //       // iconColor: Colors.red, // (!!!!)
+        //       border: OutlineInputBorder(),
+        //       labelStyle: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w400)),
+        //   // textTheme: const TextTheme(titleMedium: TextStyle(color: Colors.red)), // (!!!!)
+        //   textSelectionTheme: const TextSelectionThemeData(
+        //       selectionColor: Colors.red, cursorColor: Colors.green, selectionHandleColor: Colors.black),
+
+        //   // This appBarTheme covers the whole application's AppBar
+        //   appBarTheme: const AppBarTheme(
+        //     centerTitle: true,
+        //     backgroundColor: Colors.transparent,
+        //     systemOverlayStyle: SystemUiOverlayStyle.dark,
+        //     elevation: 4,
+        //   )),
+        home: const ThemeLearnView());
   }
 }

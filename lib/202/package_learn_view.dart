@@ -18,6 +18,7 @@ class _PackageLearnViewState extends State<PackageLearnView> with TickerProvider
     return Scaffold(
         appBar: AppBar(),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: Theme.of(context).buttonTheme.colorScheme?.onPrimary,
           onPressed: () {
             launchUrl(_url);
           },
