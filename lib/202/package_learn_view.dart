@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_application_1/202/package/loading_bar.dart';
 
 class PackageLearnView extends StatefulWidget {
   const PackageLearnView({super.key});
@@ -11,24 +11,6 @@ class PackageLearnView extends StatefulWidget {
 class _PackageLearnViewState extends State<PackageLearnView> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(),
-        body: const SpinKitFadingCircle(
-          color: Colors.black,
-          size: 50.0,
-        )
-
-        // const SpinKitPianoWave(
-        //   color: Colors.black,
-        //   size: 50.0,
-        // ),
-
-        // SpinKitSquareCircle(
-        //   color: Colors.white,
-        //   size: 50.0,
-        //   controller: AnimationController(vsync: this, duration: const Duration(milliseconds: 1200)),
-        // ),
-
-        );
+    return Scaffold(appBar: AppBar(), body: const LoadingBar());
   }
 }
