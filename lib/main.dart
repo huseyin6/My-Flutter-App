@@ -54,7 +54,8 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_application_1/202/service/service_post_learn_view.dart';
 // import 'package:flutter_application_1/202/package_learn_view.dart';
 import 'package:flutter_application_1/202/theme/light_theme.dart';
-import 'package:flutter_application_1/202/theme_learn_view.dart';
+// import 'package:flutter_application_1/202/theme_learn_view.dart';
+import 'package:flutter_application_1/202/widget_size_enum_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -100,6 +101,6 @@ class MyApp extends StatelessWidget {
         //     systemOverlayStyle: SystemUiOverlayStyle.dark,
         //     elevation: 4,
         //   )),
-        home: const ThemeLearnView());
+        home: const WidgetSizeEnumLearn());
   }
 }
