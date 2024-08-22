@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/demos/password_text_field.dart';
 
 class WidgetSizeEnumLearn extends StatefulWidget {
   const WidgetSizeEnumLearn({super.key});
@@ -13,13 +13,21 @@ class _WidgetSizeEnumLearnState extends State<WidgetSizeEnumLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-        child: Card(
-          child: Container(
-            height: WidgetSizes.normalCardHeight.value(),
-            color: Colors.indigo,
+      body: Column(
+        children: [
+          const PasswordTextField(),
+          const SizedBox(
+            height: 100,
           ),
-        ),
+          Center(
+            child: Card(
+              child: Container(
+                height: WidgetSizes.normalCardHeight.value(),
+                color: Colors.indigo,
+              ),
+            ),
+          )
+        ],
       ),
     );
   }

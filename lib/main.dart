@@ -55,6 +55,8 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_application_1/202/package_learn_view.dart';
 import 'package:flutter_application_1/202/theme/light_theme.dart';
 // import 'package:flutter_application_1/202/theme_learn_view.dart';
+
+// 6. Demo using password_text_field.dart:
 import 'package:flutter_application_1/202/widget_size_enum_learn.dart';
 
 void main() {
