@@ -19,13 +19,13 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
     _isOdd = widget.message.length.isOdd;
 
     _evaluateMessageIsOddOrEven();
-    print(1);
+    // print(1);
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    print(2);
+    // print(2);
   }
 
   @override
@@ -38,14 +38,14 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
       _evaluateMessageIsOddOrEven();
       setState(() {}); // Update Screen
     }
-    print(3);
+    // print(3);
   }
 
   // When exit page:
   @override
   void dispose() {
     super.dispose();
-    print("LOG: Dispose");
+    // print("LOG: Dispose");
 
     // Clear state
     _message = "";

@@ -27,18 +27,22 @@ class _ModelLearnViewState extends State<ModelLearnView> {
     final user2 = PostModel2(2, 2, "title 2", "model 2");
     user2.body = "update model 2";
 
+    // ignore: unused_local_variable
     final user3 = PostModel3(3, 3, "title 3", "model 3");
     // user3.body = "update model 3";
 
+    // ignore: unused_local_variable
     final user4 = PostModel4(userId: 4, id: 4, title: "title 4 ", body: "model 4");
     // user4.body = "update model 4";
 
     final user5 = PostModel5(userId: 5, id: 5, title: "title 5", body: "model 5");
     user5.body;
 
+    // ignore: unused_local_variable
     final user6 = PostModel6(userId: 6, id: 6, title: "title 6", body: "model 6");
     // user6.
 
+    // ignore: unused_local_variable
     final user7 = PostModel7();
 
     // final user8 = PostModel8(userId: 8, id: 8, title: "title 8");
