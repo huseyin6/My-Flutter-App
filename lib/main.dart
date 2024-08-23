@@ -57,7 +57,9 @@ import 'package:flutter_application_1/202/theme/light_theme.dart';
 // import 'package:flutter_application_1/202/theme_learn_view.dart';
 
 // 6. Demo using password_text_field.dart:
-import 'package:flutter_application_1/202/widget_size_enum_learn.dart';
+// import 'package:flutter_application_1/202/widget_size_enum_learn.dart';
+
+import 'package:flutter_application_1/202/image_learn_202.dart';
 
 void main() {
   runApp(const MyApp());
@@ -103,6 +105,6 @@ class MyApp extends StatelessWidget {
         //     systemOverlayStyle: SystemUiOverlayStyle.dark,
         //     elevation: 4,
         //   )),
-        home: const WidgetSizeEnumLearn());
+        home: const ImageLearn202());
   }
 }
