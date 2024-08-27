@@ -60,7 +60,8 @@ import 'package:flutter_application_1/202/theme/light_theme.dart';
 // import 'package:flutter_application_1/202/widget_size_enum_learn.dart';
 
 // import 'package:flutter_application_1/202/image_learn_202.dart';
-import 'package:flutter_application_1/202/animated_learn_view.dart';
+// import 'package:flutter_application_1/202/animated_learn_view.dart';
+import 'package:flutter_application_1/202/oop_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -106,6 +107,6 @@ class MyApp extends StatelessWidget {
         //     systemOverlayStyle: SystemUiOverlayStyle.dark,
         //     elevation: 4,
         //   )),
-        home: const AnimatedLearnView());
+        home: const OOPLearView());
   }
 }
