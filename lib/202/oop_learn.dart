@@ -58,6 +58,5 @@ class SampleDownload extends IFileDownload with ShareMixin {
 
 mixin ShareMixin on IFileDownload {
   // void share(args);
-
   void toShowFile(params) {}
 }
