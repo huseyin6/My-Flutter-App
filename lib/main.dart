@@ -64,8 +64,9 @@ import 'package:flutter_application_1/202/theme/light_theme.dart';
 // import 'package:flutter_application_1/202/oop_learn_view.dart';
 // import 'package:flutter_application_1/202/state_manage/state_manage_learn_view.dart';
 // import 'package:flutter_application_1/202/form_learn_view.dart';
+// import 'package:flutter_application_1/202/cache/shared_learn_cache.dart';
 
-import 'package:flutter_application_1/202/cache/shared_learn_cache.dart';
+import 'package:flutter_application_1/202/cache/shared_learn_list_cache.dart';
 
 void main() {
   runApp(const MyApp());
@@ -111,6 +112,6 @@ class MyApp extends StatelessWidget {
         //     systemOverlayStyle: SystemUiOverlayStyle.dark,
         //     elevation: 4,
         //   )),
-        home: const SharedLearn());
+        home: const SharedListCache());
   }
 }

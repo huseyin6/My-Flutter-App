@@ -20,9 +20,9 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
   }
 
   Future<void> _initialize() async {
-    _changeLoading();
+    changeLoading();
     await _manager.init();
-    _changeLoading();
+    changeLoading();
     getCacheValues();
   }
 
@@ -44,20 +44,16 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_currentValue.toString()),
-        actions: [
-          isLoading
-              ? Center(
-                  child: CircularProgressIndicator(
-                    color: Theme.of(context).scaffoldBackgroundColor,
-                  ),
-                )
-              : const SizedBox.shrink()
-        ],
+        actions: [_loading(context)],
       ),
-      body: TextField(
-        onChanged: (value) {
-          _onChangeValue(value);
-        },
+      body: Column(
+        children: [
+          TextField(
+            onChanged: (value) {
+              _onChangeValue(value);
+            },
+          ),
+        ],
       ),
       floatingActionButton: Row(
         mainAxisSize: MainAxisSize.min,
@@ -69,12 +65,22 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
     );
   }
 
+  SingleChildRenderObjectWidget _loading(BuildContext context) {
+    return isLoading
+        ? Center(
+            child: CircularProgressIndicator(
+              color: Theme.of(context).scaffoldBackgroundColor,
+            ),
+          )
+        : const SizedBox.shrink();
+  }
+
   FloatingActionButton _saveValueButton() {
     return FloatingActionButton(
       onPressed: () async {
-        _changeLoading();
+        changeLoading();
         await _manager.saveString(SharedKeys.counter, _currentValue.toString());
-        _changeLoading();
+        changeLoading();
       },
       child: const Icon(Icons.save),
     );
@@ -83,11 +89,11 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
   FloatingActionButton _removeValueButton() {
     return FloatingActionButton(
       onPressed: () async {
-        _changeLoading();
+        changeLoading();
         await _manager.removeItem(
           SharedKeys.counter,
         );
-        _changeLoading();
+        changeLoading();
       },
       child: const Icon(Icons.remove),
     );
@@ -97,7 +103,7 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
 abstract class LoadingStatefull<T extends StatefulWidget> extends State<T> {
   bool isLoading = false;
 
-  void _changeLoading() {
+  void changeLoading() {
     setState(() {
       isLoading = !isLoading;
     });
